@@ -9,9 +9,6 @@ function Book(author, title, pages, read) {
     this.title = title
     this.pages = pages
     this.read = read
-    this.info = function(){
-        return (title + author + ", " + pages)
-    }
 
 }
 
@@ -20,6 +17,17 @@ function Book(author, title, pages, read) {
 function addBookToLibrary() {
   // do stuff here
 
+}
+
+
+//Listen for New Book Entry button click
+const addBookButton = document.querySelector(".add-book-button");
+addBookButton.addEventListener("click", displayForm);
+
+
+//display the form
+function displayForm(){
+    document.getElementById("add-book-form").style.display = "";
 }
 
 let x = new Book("Ben", "Title", 39, true)
