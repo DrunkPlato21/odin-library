@@ -6,9 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="library.js"  defer></script>
-    <title>Document</title>
+    <title>Library Odin Project</title>
 </head>
 <body>
+<div class="title">Library Odin Project</div>
+
+<div class="container">
+
+    <div class="form-heading">
+        <h1>Add New Book to Library</h1>
+    </div>
+
+    <div class="books-heading"><h1>Current Books in Library:</h1></div>
+
+    <div class="form">
+
+        <button class="add-book-button">Add New Book</button>
+        
+        <div id="add-book-form" style="display:none">
+            <form id="add-book">
+                <label for="Title">Title:</label>
+                <input type="text" id="Title" name="Title">
+                <label for="Author">Author:</label>
+                <input type="text" id="Author" name="Author">
+                <label for="Pages">Pages:</label>
+                <input type="text" id="Pages" name="Pages">
+                <label for="Title">Read:</label>
+                <input type="text" id="Read" name="Read">
+            </form>
+        </div>
+        <button type="submit" class="submit-button">Submit To Library</button>
+        <button type="reset" class="reset-button">Reset Form</button>
+
+    </div>
+
+    <div class="books">
+
+    </div>
+
+</div>
+
+
+
+<div class="book">
+    <div class="name"></div> 
+    <div class="author"></div>
+    <div class="pages"></div>
+    <div class="read"></div>
+</div>
+
+<form>
+
+</form>
+
     
 </body>
 </html>
