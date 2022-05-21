@@ -1,7 +1,7 @@
-/* * { 
+* { 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: 1px solid black;
-} */
+}
 
 
 body{
@@ -33,3 +33,17 @@ table{
     margin-top: 30px;
     min-width: 500px;
 }
+
+.add-book-button {
+    max-width: 150px;
+    height: 50px;
+    margin: 25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
