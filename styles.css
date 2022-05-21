@@ -19,3 +19,17 @@ body{
     display: flex;
    
 }
+
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td{
+    text-align: center;
+}
+
+table{
+    margin-top: 30px;
+    min-width: 500px;
+}

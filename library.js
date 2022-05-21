@@ -93,7 +93,7 @@ function displayBooks(){
         let title = myLibrary[index].title
         let pages = myLibrary[index].pages
         let read = myLibrary[index].read
-        
+        //add new row and append it to table
         row.innerHTML = `<td>${author}</td><td>${title}</td><td>${pages}</td><td>${read}</td><td><button class="del">X</button></td>`
         table.appendChild(row)
         
