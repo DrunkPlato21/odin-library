@@ -63,17 +63,21 @@ function submitForm(event){
 
     //prevent form action
     event.preventDefault(); 
-
     addBookToLibrary();
     displayBooks();
+
+    //close form
+    document.getElementById("add-book-form").style.display = "none";
+
+    
 }
 
-
+// listen for delete button clicked inside of table
 const table = document.getElementById('book-table')
 
 table.addEventListener('click', function(e){
     if (e.target.classList.contains('del')){
-        alert(e.target.innerHTML)
+       // alert(e.target.innerHTML)
         deleteRow(e)
     }
 })
@@ -83,7 +87,7 @@ function displayBooks(){
     
     const row = document.createElement('tr');
 
-//loop through each item in array
+//loop through each item in myLibary array
     myLibrary.forEach(function (item, index){
         //console.log(item, index)
 
@@ -104,9 +108,6 @@ function displayBooks(){
         console.log(author, title, pages, read)
 
        // console.log(myLibrary[index].title)
-
-
-
 
    })
 
