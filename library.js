@@ -25,7 +25,7 @@ function addBookToLibrary() {
   // do stuff here
     let newBook = new Book(bookAuthor, bookTitle, bookPages, bookRead)
     myLibrary.push(newBook)
-    console.log(myLibrary)
+    //console.log(myLibrary)
 }
 
 
@@ -64,17 +64,63 @@ function submitForm(event){
     //prevent form action
     event.preventDefault(); 
 
-    addBookToLibrary()
+    addBookToLibrary();
+    displayBooks();
 }
 
-addBookToLibrary()
-addBookToLibrary()
-addBookToLibrary()
+
+const table = document.getElementById('book-table')
+
+table.addEventListener('click', function(e){
+    if (e.target.classList.contains('del')){
+        alert(e.target.innerHTML)
+        deleteRow(e)
+    }
+})
 
 function displayBooks(){
- myLibrary.forEach(function (item, index){
-     console.log(item, index)
- })
+
+    
+    const row = document.createElement('tr');
+
+//loop through each item in array
+    myLibrary.forEach(function (item, index){
+        //console.log(item, index)
+
+
+      
+        let author = myLibrary[index].author
+        let title = myLibrary[index].title
+        let pages = myLibrary[index].pages
+        let read = myLibrary[index].read
+        
+        row.innerHTML = `<td>${author}</td><td>${title}</td><td>${pages}</td><td>${read}</td><td><button class="del">X</button></td>`
+        table.appendChild(row)
+        
+       
+        
+        //bookRow.classList.add("book-item")
+        
+        console.log(author, title, pages, read)
+
+       // console.log(myLibrary[index].title)
+
+
+
+
+   })
+
+
 }
 
+function deleteRow(x){
+    let td = x.target.parentNode;
+    let tr = td.parentNode;
+    tr.parentNode.removeChild(tr)
+}
+
+
+addBookToLibrary()
 displayBooks()
+
+
