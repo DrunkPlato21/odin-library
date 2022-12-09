@@ -22,6 +22,11 @@ function addBookToLibrary(book) {
 
 }
 
+function showForm() {
+  let form = document.querySelector('.submit-form');
+  form.classList.add('show');
+}
+
 let dummy = new Book('blah', 'Clay', 50)
 let dummy2 = new Book('blah', 'Clay', 50)
 
