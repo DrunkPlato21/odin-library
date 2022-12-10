@@ -1,4 +1,26 @@
-    /* Hide the form by default */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-book {
+  background-color: #1c87c9; /* a vibrant blue color */
+  border-radius: 5px; /* rounded corners */
+  color: white; /* white text */
+  padding: 10px 20px; /* add some padding to the button */
+  font-family: 'Montserrat', sans-serif; /* a modern, clean font */
+  font-size: 16px; /* a readable font size */
+  cursor: pointer; /* change the cursor to a pointer on hover */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /* add a subtle box shadow */
+  width: 150px;
+}
+
+.add-book:hover {
+    background-color: #3d9ae8; /* a slightly darker shade of blue */
+  }
+
+/* Hide the form by default */
 .submit-form {
     width: 400px;
     margin: auto;
@@ -12,6 +34,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
+    background-color: whitesmoke;
 }
 
     /* Show the form when the "Show Form" button is clicked */
@@ -32,6 +55,7 @@
     border-radius: 5px;
     outline: none;
     transition: all 0.2s ease;
+    background-color: white
 }
 
 .submit-form input:focus {
@@ -53,3 +77,26 @@
 #pages {
     width: 10%;
 }
+
+/* create grid for library  */
+.library-container{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    gap: 10px;
+    margin-top: 45px;
+    
+}
+
+.box {
+    /* Styles for the box go here */
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* Other styles for the close button go here */
+  }

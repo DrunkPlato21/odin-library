@@ -1,10 +1,13 @@
 let myLibrary = [];
+let bookName
+let author
+let pages
 
 function getFormValues(){
 
-    let bookName = document.getElementById('name').value
-    let author = document.getElementById('author').value
-    let pages = document.getElementById('pages').value
+     bookName = document.getElementById('name').value
+     author = document.getElementById('author').value
+     pages = document.getElementById('pages').value
 
 }
 
@@ -15,28 +18,39 @@ function Book(name, author, pages) {
   this.pages = pages
 }
 
-function addBookToLibrary(book) {
+function addBookToLibrary() {
   // do stuff here
 
-  myLibrary.push(book)
+  getFormValues()
+  let newBook = new Book(bookName, author, pages)  
+  myLibrary.push(newBook)
+  console.log(myLibrary)
 
 }
+let form = document.querySelector('.submit-form');
 
 function showForm() {
-  let form = document.querySelector('.submit-form');
   form.classList.add('show');
 }
 
-let dummy = new Book('blah', 'Clay', 50)
-let dummy2 = new Book('blah', 'Clay', 50)
-
-addBookToLibrary(dummy)
-addBookToLibrary(dummy2)
-
 let submit = document.getElementById('submit')
 
-submit.addEventListener("click", ()=>{
-    alert('ellpo')
+submit.addEventListener("click", (event)=>{
+
+  event.preventDefault()
+  addBookToLibrary()
+  form.classList.remove('show');
+   
 })
+
+let closeButton = document.querySelector('.close-button');
+
+closeButton.addEventListener('click', function() {
+  let box = this.closest('.box');
+  box.parentNode.removeChild(box);
+});
+
+
+
 
 console.log(myLibrary)
