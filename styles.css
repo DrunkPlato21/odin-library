@@ -95,6 +95,13 @@ body {
     top: 2px;
     right: 10px;
     cursor: pointer;
+    border: 1px solid black;
+    border-radius: 90%;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    line-height: 90%;
+    
   }
 
   .book {
