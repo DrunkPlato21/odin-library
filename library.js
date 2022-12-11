@@ -17,10 +17,10 @@ function getFormValues(){
 }
 
 function Book(name, author, pages, isRead, index) {
-  this.name = name
-  this.author = author
-  this.pages = pages
-  this.index = index
+  this.name = name,
+  this.author = author,
+  this.pages = pages,
+  this.index = index,
   this.isRead = isRead
 }
 
