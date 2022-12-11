@@ -193,6 +193,8 @@ function loadBooks(){
 
     if (myLibrary == [] || myLibrary == "" || myLibrary == null){
 
+      return
+
     } else{
 
       for (let i = 0; i < myLibrary.length ; i++){
