@@ -1,5 +1,7 @@
 # odin-library
 
+You can try it here: https://drunkplato21.github.io/odin-library/
+
 A simple JavaScript/HTML/CSS library project where you can add and delete books, and save them to local storage.
 
 I did this according to the rules of the Odin Project lesson: https://www.theodinproject.com/lessons/node-path-javascript-library
