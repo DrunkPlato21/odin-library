@@ -1,3 +1,6 @@
+/* * { border: 1px solid black; } */
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -7,7 +10,7 @@ body {
 .add-book {
   background-color: #1c87c9; /* a vibrant blue color */
   border-radius: 5px; /* rounded corners */
-  color: white; /* white text */
+  color: white; 
   padding: 10px 20px; /* add some padding to the button */
   font-family: 'Montserrat', sans-serif; /* a modern, clean font */
   font-size: 16px; /* a readable font size */
@@ -89,10 +92,11 @@ body {
     
 }
 
+
   
   .close-button {
     position: absolute;
-    top: 2px;
+    top: 7px;
     right: 10px;
     cursor: pointer;
     border: 1px solid black;
@@ -108,8 +112,81 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content:space-around;
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    background-color: #eee;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
+
+  .book-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+  }
+  
+  .book-author {
+    
+    margin-top: 1em;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .book-pages {
+    margin-top: 1em;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+  }
+
+  .book-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+  } 
+
+ .del{ padding: 8px 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+cursor: pointer;}
+
+    .del::before {
+        content: "X";
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: red;
+        font-size: 20px;
+      }
+
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+      h1 {
+        animation: pulse 1s 3;
+      }
+
+/*  */
+
+.read-toggle{
+    width: 30px;
+    height: 30px;
+}

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <script src="library.js"  defer></script>
     <title>Library Odin Project</title>
+
+    
 </head>
 <body>
 
@@ -20,19 +22,26 @@
     <input required type="text" name="name" id = "name" placeholder="Book Name">
     <input required type="text" name="author" id= "author" placeholder="Book Author">
     # of Pages: <input required type="number" name="pages" id = "pages" placeholder="" >
+    Have you read it?
+    <input type="checkbox" id="read-toggle">
     <input type="submit" id="submit">
 </div>
 
 <div class="library-container">
 
-    <div class="book">
-        <div class="book-title">Title</div>
-        <div class="book-author">Author</div>
-        <div class="book-pages">Pages</div>
-    </div>
 
+    <div class="book">
+        <div class="book-title">Lord of the Rings</div>
+        <div class="book-author">J.R.R Tolkien</div>
+        <div class="book-pages">1200</div>
+        <div class="book-buttons">
+            <input type="checkbox" id="read-toggle" onclick="toggleReadStatus()">
+
+            <button class="del" index="">Delete</button>
+          </div>
+     </div>
 
 </div>
-    
+
 </body>
 </html>
