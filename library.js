@@ -206,8 +206,6 @@ function loadBooks(){
 
     }
 
-
-
     refreshGrid()
     console.log(myLibrary)
 
@@ -218,7 +216,7 @@ function loadBooks(){
 
 
 
-//  addBookToLibrary("Lord of the Rings", "J.R.R Tolkien", "1200", true)
+addBookToLibrary("Lord of the Rings", "J.R.R Tolkien", "1200", true)
 // addBookToLibrary("Game of Thrones", "GRRM", "1200", false)
 // addBookToLibrary("The Bible", "God", "2000", false)
 
