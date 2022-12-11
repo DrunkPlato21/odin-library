@@ -16,6 +16,15 @@ function getFormValues(){
 
 }
 
+function removeFormValues() {
+
+  document.getElementById('name').value = ""
+  document.getElementById('author').value = ""
+  document.getElementById('pages').value = ""
+  document.getElementById('read-toggle').checked = false
+
+}
+
 function Book(name, author, pages, isRead, index) {
   this.name = name,
   this.author = author,
@@ -170,6 +179,8 @@ submit.addEventListener("click", (event)=>{
 
   addBookToLibrary(bookName, author, pages, isRead)
   form.classList.remove('show');
+  removeFormValues()
+  
    
 })
 
