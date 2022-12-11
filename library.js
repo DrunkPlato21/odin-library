@@ -109,6 +109,7 @@ readToggle.addEventListener('click', function(e){
   let readIndex = readToggle.getAttribute('index')
   myLibrary[readIndex].toggleReadStatus()
   console.log(myLibrary[readIndex].isRead)
+  saveBooks()
 
 })
 
@@ -179,13 +180,36 @@ function saveBooks(){
 }
 
 function loadBooks(){
-  myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
-  refreshGrid()
+ 
+    myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
+    console.log(myLibrary)
+
+    if (myLibrary == [] || myLibrary == "" || myLibrary == null){
+
+    } else{
+
+      for (let i = 0; i < myLibrary.length ; i++){
+        myLibrary[i].toggleReadStatus = function() {
+          this.isRead = !this.isRead;
+          
+        }
+      }
+
+    }
+
+
+
+    refreshGrid()
+    console.log(myLibrary)
+
 }
 
-loadBooks()
+ loadBooks()
 
-// addBookToLibrary("Lord of the Rings", "J.R.R Tolkien", "1200", true)
+
+
+
+//  addBookToLibrary("Lord of the Rings", "J.R.R Tolkien", "1200", true)
 // addBookToLibrary("Game of Thrones", "GRRM", "1200", false)
 // addBookToLibrary("The Bible", "God", "2000", false)
 
