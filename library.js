@@ -158,8 +158,15 @@ let submit = document.getElementById('submit')
 
 submit.addEventListener("click", (event)=>{
 
+  
+
   event.preventDefault()
   getFormValues()
+  if (bookName == "" || bookName == null || author == "" || author == null || pages == "" || pages == null) {
+    alert("You can't leave any text boxes blank")
+    return
+  }
+  
 
   addBookToLibrary(bookName, author, pages, isRead)
   form.classList.remove('show');
