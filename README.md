@@ -21,6 +21,6 @@ The Book Library project was developed using HTML, CSS, and vanilla JavaScript. 
 
 I encountered many challenges creating this, but I have learned so much. 
 
-The biggest challenge was towards the end, when I was adding localstorage. It turns out, object prototypes do not exist on objects loaded from memory. I had to redefine the prototype on load to solve this. I could have also used the object data from memory to reconstruct the objects.
+The biggest challenge was towards the end, when I was adding localstorage. It turns out, object prototypes do not exist on objects loaded from memory. I had to redefine the prototype by using the object data from memory to reconstruct the objects on load.
 
 I've gotten to use pretty much all of the skills and knowledge I've been accumulating in the Odin Project so far, and am looking forward to moving on to Factory Functions and the tic-tac-toe project. 
